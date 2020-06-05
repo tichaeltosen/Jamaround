@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{F300F66B-E73F-70FB-2E22-4B766F86B370}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/2D Platformer Assets/Scripts/UIController.cs">
+    <Files>
+      <File FileName="Assets/2D Platformer Assets/Scripts/PlayerController.cs" Line="5" Column="46" />
+      <File FileName="Assets/2D Platformer Assets/Scripts/CameraController.cs" Line="30" Column="74" />
+      <File FileName="Assets/2D Platformer Assets/Scripts/PlayerHealthController.cs" Line="14" Column="6" />
+      <File FileName="Assets/2D Platformer Assets/Scripts/DamagePlayer.cs" Line="21" Column="12" />
+      <File FileName="Assets/2D Platformer Assets/Scripts/UIController.cs" Line="13" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Jamaround" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="2D Platformer Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="UIController.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="583a9be8-8a7f-4010-8b79-2dbae153e7fa" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
