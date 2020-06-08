@@ -43,10 +43,18 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Look"",
+                    ""name"": ""CamControlX"",
                     ""type"": ""Value"",
-                    ""id"": ""c8ba0efe-6d4d-424e-8deb-2d6f98b4097c"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""id"": ""20eea2f1-7d1b-4a67-9144-9f41fc134956"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""CamControlY"",
+                    ""type"": ""Value"",
+                    ""id"": ""0f3c208c-0f9d-42ae-845c-c22a378b7485"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -296,23 +304,45 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""61ce4bbd-76cf-4d8b-8de5-c7daccfa629e"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""72d7f142-e2ed-4a64-8ac5-1aaf18ce498d"",
+                    ""path"": ""<Mouse>/delta/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Look"",
+                    ""groups"": """",
+                    ""action"": ""CamControlX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7b1be716-3c4a-4dc4-8f7c-e5eab70f3c53"",
-                    ""path"": ""<Mouse>/delta"",
+                    ""id"": ""17d27512-870a-4e0c-b844-e19788ad3d5a"",
+                    ""path"": ""<Gamepad>/rightStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Look"",
+                    ""groups"": """",
+                    ""action"": ""CamControlX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""544d281b-badb-4bf7-8a20-7565ae6c4d6e"",
+                    ""path"": ""<Mouse>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CamControlY"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""732e109a-7f6b-42eb-b52b-0309e3782be4"",
+                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CamControlY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -354,7 +384,8 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
         m_PlayerGameplay_Move = m_PlayerGameplay.FindAction("Move", throwIfNotFound: true);
         m_PlayerGameplay_Talk = m_PlayerGameplay.FindAction("Talk", throwIfNotFound: true);
         m_PlayerGameplay_Hit = m_PlayerGameplay.FindAction("Hit", throwIfNotFound: true);
-        m_PlayerGameplay_Look = m_PlayerGameplay.FindAction("Look", throwIfNotFound: true);
+        m_PlayerGameplay_CamControlX = m_PlayerGameplay.FindAction("CamControlX", throwIfNotFound: true);
+        m_PlayerGameplay_CamControlY = m_PlayerGameplay.FindAction("CamControlY", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -407,7 +438,8 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerGameplay_Move;
     private readonly InputAction m_PlayerGameplay_Talk;
     private readonly InputAction m_PlayerGameplay_Hit;
-    private readonly InputAction m_PlayerGameplay_Look;
+    private readonly InputAction m_PlayerGameplay_CamControlX;
+    private readonly InputAction m_PlayerGameplay_CamControlY;
     public struct PlayerGameplayActions
     {
         private @PrototypeInputSystem m_Wrapper;
@@ -415,7 +447,8 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_PlayerGameplay_Move;
         public InputAction @Talk => m_Wrapper.m_PlayerGameplay_Talk;
         public InputAction @Hit => m_Wrapper.m_PlayerGameplay_Hit;
-        public InputAction @Look => m_Wrapper.m_PlayerGameplay_Look;
+        public InputAction @CamControlX => m_Wrapper.m_PlayerGameplay_CamControlX;
+        public InputAction @CamControlY => m_Wrapper.m_PlayerGameplay_CamControlY;
         public InputActionMap Get() { return m_Wrapper.m_PlayerGameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -434,9 +467,12 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                 @Hit.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnHit;
                 @Hit.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnHit;
                 @Hit.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnHit;
-                @Look.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnLook;
+                @CamControlX.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlX;
+                @CamControlX.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlX;
+                @CamControlX.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlX;
+                @CamControlY.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlY;
+                @CamControlY.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlY;
+                @CamControlY.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlY;
             }
             m_Wrapper.m_PlayerGameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -450,9 +486,12 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                 @Hit.started += instance.OnHit;
                 @Hit.performed += instance.OnHit;
                 @Hit.canceled += instance.OnHit;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
+                @CamControlX.started += instance.OnCamControlX;
+                @CamControlX.performed += instance.OnCamControlX;
+                @CamControlX.canceled += instance.OnCamControlX;
+                @CamControlY.started += instance.OnCamControlY;
+                @CamControlY.performed += instance.OnCamControlY;
+                @CamControlY.canceled += instance.OnCamControlY;
             }
         }
     }
@@ -480,6 +519,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnTalk(InputAction.CallbackContext context);
         void OnHit(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
+        void OnCamControlX(InputAction.CallbackContext context);
+        void OnCamControlY(InputAction.CallbackContext context);
     }
 }
