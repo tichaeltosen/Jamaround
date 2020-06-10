@@ -15,11 +15,11 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
     ""name"": ""PrototypeInputSystem"",
     ""maps"": [
         {
-            ""name"": ""PlayerGameplay"",
+            ""name"": ""Player"",
             ""id"": ""5499bb53-4425-4636-90b4-914c8fa02ce5"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""Walk"",
                     ""type"": ""Value"",
                     ""id"": ""200960be-ce27-4241-b503-550097c8db32"",
                     ""expectedControlType"": ""Vector2"",
@@ -43,18 +43,18 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""CamControlX"",
-                    ""type"": ""Value"",
-                    ""id"": ""20eea2f1-7d1b-4a67-9144-9f41fc134956"",
-                    ""expectedControlType"": ""Axis"",
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""a8ff6969-8ada-4f60-b147-5ce8186f0ed5"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""CamControlY"",
+                    ""name"": ""Look"",
                     ""type"": ""Value"",
-                    ""id"": ""0f3c208c-0f9d-42ae-845c-c22a378b7485"",
-                    ""expectedControlType"": ""Axis"",
+                    ""id"": ""47e4d000-4cc7-418d-b999-52d0ef9b9d70"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -67,7 +67,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -78,7 +78,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -89,7 +89,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -100,7 +100,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -111,7 +111,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -122,7 +122,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -133,7 +133,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -144,7 +144,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -155,7 +155,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -166,7 +166,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -177,7 +177,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -188,7 +188,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -199,7 +199,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -210,7 +210,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -221,7 +221,7 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -232,14 +232,14 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""Move"",
+                    ""action"": ""Walk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
                     ""id"": ""ee3e7c52-ebe6-461a-9f7a-017616f6f1a4"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -304,45 +304,45 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""72d7f142-e2ed-4a64-8ac5-1aaf18ce498d"",
-                    ""path"": ""<Mouse>/delta/x"",
+                    ""id"": ""60c27e6b-ea12-4bf9-a726-23531c2688df"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CamControlX"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""17d27512-870a-4e0c-b844-e19788ad3d5a"",
-                    ""path"": ""<Gamepad>/rightStick/x"",
+                    ""id"": ""e091de4e-61c0-42d8-a503-1e6ff7062c71"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CamControlX"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""544d281b-badb-4bf7-8a20-7565ae6c4d6e"",
-                    ""path"": ""<Mouse>/delta/y"",
+                    ""id"": ""368a097f-3939-4851-aca0-1b301574e630"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CamControlY"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""732e109a-7f6b-42eb-b52b-0309e3782be4"",
-                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""id"": ""3329e407-ac94-4424-a870-c642aa648b23"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""CamControlY"",
+                    ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -379,13 +379,13 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
         }
     ]
 }");
-        // PlayerGameplay
-        m_PlayerGameplay = asset.FindActionMap("PlayerGameplay", throwIfNotFound: true);
-        m_PlayerGameplay_Move = m_PlayerGameplay.FindAction("Move", throwIfNotFound: true);
-        m_PlayerGameplay_Talk = m_PlayerGameplay.FindAction("Talk", throwIfNotFound: true);
-        m_PlayerGameplay_Hit = m_PlayerGameplay.FindAction("Hit", throwIfNotFound: true);
-        m_PlayerGameplay_CamControlX = m_PlayerGameplay.FindAction("CamControlX", throwIfNotFound: true);
-        m_PlayerGameplay_CamControlY = m_PlayerGameplay.FindAction("CamControlY", throwIfNotFound: true);
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Walk = m_Player.FindAction("Walk", throwIfNotFound: true);
+        m_Player_Talk = m_Player.FindAction("Talk", throwIfNotFound: true);
+        m_Player_Hit = m_Player.FindAction("Hit", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -432,70 +432,70 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // PlayerGameplay
-    private readonly InputActionMap m_PlayerGameplay;
-    private IPlayerGameplayActions m_PlayerGameplayActionsCallbackInterface;
-    private readonly InputAction m_PlayerGameplay_Move;
-    private readonly InputAction m_PlayerGameplay_Talk;
-    private readonly InputAction m_PlayerGameplay_Hit;
-    private readonly InputAction m_PlayerGameplay_CamControlX;
-    private readonly InputAction m_PlayerGameplay_CamControlY;
-    public struct PlayerGameplayActions
+    // Player
+    private readonly InputActionMap m_Player;
+    private IPlayerActions m_PlayerActionsCallbackInterface;
+    private readonly InputAction m_Player_Walk;
+    private readonly InputAction m_Player_Talk;
+    private readonly InputAction m_Player_Hit;
+    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Look;
+    public struct PlayerActions
     {
         private @PrototypeInputSystem m_Wrapper;
-        public PlayerGameplayActions(@PrototypeInputSystem wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_PlayerGameplay_Move;
-        public InputAction @Talk => m_Wrapper.m_PlayerGameplay_Talk;
-        public InputAction @Hit => m_Wrapper.m_PlayerGameplay_Hit;
-        public InputAction @CamControlX => m_Wrapper.m_PlayerGameplay_CamControlX;
-        public InputAction @CamControlY => m_Wrapper.m_PlayerGameplay_CamControlY;
-        public InputActionMap Get() { return m_Wrapper.m_PlayerGameplay; }
+        public PlayerActions(@PrototypeInputSystem wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Walk => m_Wrapper.m_Player_Walk;
+        public InputAction @Talk => m_Wrapper.m_Player_Talk;
+        public InputAction @Hit => m_Wrapper.m_Player_Hit;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerGameplayActions set) { return set.Get(); }
-        public void SetCallbacks(IPlayerGameplayActions instance)
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerActions instance)
         {
-            if (m_Wrapper.m_PlayerGameplayActionsCallbackInterface != null)
+            if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnMove;
-                @Talk.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnTalk;
-                @Talk.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnTalk;
-                @Talk.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnTalk;
-                @Hit.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnHit;
-                @Hit.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnHit;
-                @Hit.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnHit;
-                @CamControlX.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlX;
-                @CamControlX.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlX;
-                @CamControlX.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlX;
-                @CamControlY.started -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlY;
-                @CamControlY.performed -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlY;
-                @CamControlY.canceled -= m_Wrapper.m_PlayerGameplayActionsCallbackInterface.OnCamControlY;
+                @Walk.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWalk;
+                @Walk.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWalk;
+                @Walk.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWalk;
+                @Talk.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTalk;
+                @Talk.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTalk;
+                @Talk.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTalk;
+                @Hit.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHit;
+                @Hit.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHit;
+                @Hit.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHit;
+                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
             }
-            m_Wrapper.m_PlayerGameplayActionsCallbackInterface = instance;
+            m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Move.started += instance.OnMove;
-                @Move.performed += instance.OnMove;
-                @Move.canceled += instance.OnMove;
+                @Walk.started += instance.OnWalk;
+                @Walk.performed += instance.OnWalk;
+                @Walk.canceled += instance.OnWalk;
                 @Talk.started += instance.OnTalk;
                 @Talk.performed += instance.OnTalk;
                 @Talk.canceled += instance.OnTalk;
                 @Hit.started += instance.OnHit;
                 @Hit.performed += instance.OnHit;
                 @Hit.canceled += instance.OnHit;
-                @CamControlX.started += instance.OnCamControlX;
-                @CamControlX.performed += instance.OnCamControlX;
-                @CamControlX.canceled += instance.OnCamControlX;
-                @CamControlY.started += instance.OnCamControlY;
-                @CamControlY.performed += instance.OnCamControlY;
-                @CamControlY.canceled += instance.OnCamControlY;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
             }
         }
     }
-    public PlayerGameplayActions @PlayerGameplay => new PlayerGameplayActions(this);
+    public PlayerActions @Player => new PlayerActions(this);
     private int m_KeyboardandMouseSchemeIndex = -1;
     public InputControlScheme KeyboardandMouseScheme
     {
@@ -514,12 +514,12 @@ public class @PrototypeInputSystem : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
-    public interface IPlayerGameplayActions
+    public interface IPlayerActions
     {
-        void OnMove(InputAction.CallbackContext context);
+        void OnWalk(InputAction.CallbackContext context);
         void OnTalk(InputAction.CallbackContext context);
         void OnHit(InputAction.CallbackContext context);
-        void OnCamControlX(InputAction.CallbackContext context);
-        void OnCamControlY(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
     }
 }

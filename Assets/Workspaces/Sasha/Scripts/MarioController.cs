@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class MarioController : MonoBehaviour
 {
-public float velocity = 5;
+public float speed = 5;
 public float turnSpeed = 10;
 
 Vector2 input;
@@ -54,7 +54,7 @@ transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSp
 
 void Move(){
 
-        transform.position += transform.forward * velocity * Time.deltaTime;
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
 
 }
