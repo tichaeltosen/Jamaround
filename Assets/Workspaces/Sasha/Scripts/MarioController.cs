@@ -25,6 +25,7 @@ cam = Camera.main.transform;
 }
 
 void Update(){
+    
 GetInput();
 
 if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1) return;
@@ -52,7 +53,8 @@ transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSp
 }
 
 void Move(){
-transform.position += transform.forward * velocity * Time.deltaTime;
-}
+
+        transform.position += transform.forward * velocity * Time.deltaTime;
+    }
 
 }
