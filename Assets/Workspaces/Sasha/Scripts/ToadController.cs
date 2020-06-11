@@ -13,11 +13,12 @@ public class ToadController : MonoBehaviour
 public float moveSpeed = 7.0f;
 public float jumpSpeed = 7.0f;
 public float gravityScale = 3.0f;
-public float turnSpeed = 1.0f;
+public float turnSpeed = 3.0f;
 
 Transform cam;
 
 // public Rigidbody theRB;
+public GameObject PlayerModel;
 public CharacterController controller;
 private Vector2 input;
 
@@ -25,7 +26,7 @@ private Vector3 moveDirection;
 
 float angle;
 
-Quaternion targetRotation;
+Quaternion lookRotation;
 
 void Start(){
     // theRB = GetComponent<Rigidbody>();
@@ -36,6 +37,8 @@ void Start(){
 }
 
 void Update (){
+
+    // transform.rotation = Quaternion.Euler(0, cam.eulerAngles.y, 0);
     //get input
 
 
@@ -88,6 +91,13 @@ if (Input.GetButtonDown("Jump"))
 moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
 
 controller.Move(moveDirection * Time.deltaTime);
+
+if(input.x != 0 || input.y != 0)
+{
+    transform.rotation = Quaternion.Euler(0f, cam.rotation.eulerAngles.y, 0f);
+    Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z)); 
+    PlayerModel.transform.rotation = Quaternion.Slerp(PlayerModel.transform.rotation, newRotation, turnSpeed * Time.deltaTime);
+}
 
 }
 

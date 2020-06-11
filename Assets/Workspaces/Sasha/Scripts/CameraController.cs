@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         //get x position of the mouse and rotate target
         float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
