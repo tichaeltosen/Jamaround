@@ -75,10 +75,18 @@ moveDirection.y = yStore;
 
 if (controller.isGrounded)
 {
-    // Debug.Log("Player is Grounded");
+    Debug.Log("Player is Grounded");
 
 moveDirection.y = 0f;
 
+// if (Input.GetButtonDown("Jump"))
+// {
+//     Debug.Log("Jump!");
+//     moveDirection.y = jumpSpeed;
+
+// }
+
+}
 if (Input.GetButtonDown("Jump"))
 {
     Debug.Log("Jump!");
@@ -86,7 +94,6 @@ if (Input.GetButtonDown("Jump"))
 
 }
 
-}
 
 moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
 
