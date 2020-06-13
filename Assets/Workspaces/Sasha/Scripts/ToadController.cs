@@ -15,6 +15,9 @@ public float jumpSpeed = 7.0f;
 public float gravityScale = 3.0f;
 public float turnSpeed = 3.0f;
 
+int jumpCount = 0;
+public int maxJumps = 2; //max amount of jumps
+
 Transform cam;
 
 // public Rigidbody theRB;
@@ -34,36 +37,16 @@ void Start(){
     Cursor.lockState = CursorLockMode.Locked;
     cam = Camera.main.transform;
 
+    jumpCount = maxJumps;
+
 }
 
 void Update (){
 
-    // transform.rotation = Quaternion.Euler(0, cam.eulerAngles.y, 0);
-    //get input
-
-
-    //calculate velocity
-//     theRB.velocity = new Vector3(input.x * moveSpeed, theRB.velocity.y, input.y * moveSpeed);
-
-//     if(Input.GetButtonDown("Jump"))
-// {
-//     theRB.velocity = new Vector3(theRB.velocity.x, jumpSpeed, theRB.velocity.z);
-// }
-
-// moveDirection = new Vector3(input.x * moveSpeed, moveDirection.y, input.y * moveSpeed);
+//get input
 input.x = Input.GetAxis("Horizontal");
 input.y = Input.GetAxis("Vertical");
-// void CalculateDirection(){
-    // angle = Mathf.Atan2(input.x, input.y);
-    // angle = Mathf.Rad2Deg * angle;
-    // angle += cam.eulerAngles.y;
-// }
-
-// void Rotate(){
-// targetRotation = Quaternion.Euler(0, angle, 0);
-// transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-// }
-
+//calculate move direction relative to camera
 float yStore = moveDirection.y;
 moveDirection = (cam.forward * input.y * moveSpeed) + (cam.right * input.x * moveSpeed);
 moveDirection = moveDirection.normalized * moveSpeed;
@@ -72,28 +55,21 @@ moveDirection.y = yStore;
         float horizontal = Input.GetAxis("Mouse X") * turnSpeed;
         transform.Rotate(0, horizontal, 0);
 
-
 if (controller.isGrounded)
 {
     Debug.Log("Player is Grounded");
 
-moveDirection.y = 0f;
 
-// if (Input.GetButtonDown("Jump"))
-// {
-//     Debug.Log("Jump!");
-//     moveDirection.y = jumpSpeed;
-
-// }
-
+moveDirection.y = 0f;//cancel out gravity when grounded
+jumpCount = maxJumps; //and reset jumpcount
 }
+
 if (Input.GetButtonDown("Jump"))
+{if (jumpCount > 0)
 {
-    Debug.Log("Jump!");
-    moveDirection.y = jumpSpeed;
-
+        Jump();
 }
-
+}
 
 moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
 
@@ -108,4 +84,10 @@ if(input.x != 0 || input.y != 0)
 
 }
 
+void Jump()
+{
+    Debug.Log("Jump!");
+    jumpCount -= 1;
+    moveDirection.y = jumpSpeed;
+}
 }
