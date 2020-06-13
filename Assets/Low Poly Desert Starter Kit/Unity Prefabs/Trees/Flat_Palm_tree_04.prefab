@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 441932}
   - component: {fileID: 3332120}
   - component: {fileID: 2328788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flat_Palm_tree_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
