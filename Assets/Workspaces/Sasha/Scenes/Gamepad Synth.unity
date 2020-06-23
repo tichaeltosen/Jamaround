@@ -305,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1724439291}
-  - component: {fileID: 1724439290}
+  - component: {fileID: 1724439293}
   - component: {fileID: 1724439292}
   m_Layer: 0
   m_Name: GameObject
@@ -314,23 +314,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1724439290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724439289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c9aad4bcde5e445d9b9bc54086e1835, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frequency: 440
-  gain: 0
-  volume: 0.1
-  frequencies: []
-  thisFreq: 0
 --- !u!4 &1724439291
 Transform:
   m_ObjectHideFlags: 0
@@ -441,3 +424,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1724439293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724439289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d96f656e3a58461d92d8998b2d3ea18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 440
+  gain: 0
+  volume: 0.1
+  frequencies: []
+  thisFreq: 0
